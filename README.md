@@ -13,9 +13,9 @@
 ### Dependencies 
 
 * Gulp
-* Babel // not included in latest commit.
 * AutoPrefixer
 * SASS
+* Babel 
 * Uglify
 * Browsersync
 * Reload
