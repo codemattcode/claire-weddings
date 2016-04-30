@@ -3,6 +3,7 @@
 var gulp          = require('gulp'),
     autoprefixer  = require('autoprefixer-core'),
     sass          = require('gulp-ruby-sass'),
+    babel         = require('gulp-babel'),
     uglify        = require('gulp-uglify'),
     browserSync   = require('browser-sync'),
     reload        = browserSync.reload,
@@ -59,7 +60,7 @@ gulp.task('build', ['build:copy', 'build:delete']);
 //browserSync
 gulp.task('browser-sync', function() {
   browserSync({
-    browser: "google chrome",
+    browser: "google chrome canary",
     server:{
       baseDir: './',
     },
