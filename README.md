@@ -23,9 +23,15 @@
 * Del
 * Rename
 
-### Gulp
+### Start
+
+` $ cd ` to project dir // navigate to working directory
+
+` $ git clone ` + repo url + newDirName // copy boilerplate repo into new project dir
 
 ` $ npm install ` // pull in dependency modules
+
+### Gulp
 
 ` $ gulp ` // compile and watch
 
