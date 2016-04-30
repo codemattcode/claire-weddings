@@ -31,4 +31,4 @@
 
 ` $ gulp ` // compile and watch
 
-` $ gulp build ` // final production output
+` $ gulp build ` // final production build
