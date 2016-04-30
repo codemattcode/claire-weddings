@@ -17,5 +17,8 @@
 * responsive grid (grid.css)
 * animate (css)
 
-` $ gulp `
-` $ gulp build `
+` $ npm init ` // create package.json file
+` $ npm install ` // pull in dependency modules
+
+` $ gulp ` // compile and watch
+` $ gulp build ` // final production output
