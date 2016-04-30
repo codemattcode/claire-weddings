@@ -1,21 +1,34 @@
-### This is a new Project
-
 "_"
 
-#### for gulp:
+### CDN
+* Normalize 
+* Font Awesome (icons)
+* JQuery
 
-* Gulp
-* Babel
-* AutoPrefixer
-* Browsersync
-* Plumber
-* SASS
-* JQuery (CDN)
-
-* ionicons (fonts)
+### Local
 * fitText (js)
 * responsive grid (grid.css)
 * animate (css)
 
-` $ gulp `
-` $ gulp build `
+### Dependencies 
+
+* Gulp
+* AutoPrefixer
+* SASS
+* Babel 
+* Uglify
+* Browsersync
+* Reload
+* Plumber
+* Del
+* Rename
+
+### Gulp
+
+` $ npm init ` // create package.json file
+
+` $ npm install ` // pull in dependency modules
+
+` $ gulp ` // compile and watch
+
+` $ gulp build ` // final production build
