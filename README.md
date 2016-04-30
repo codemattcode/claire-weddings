@@ -25,8 +25,6 @@
 
 ### Gulp
 
-` $ npm init ` // create package.json file
-
 ` $ npm install ` // pull in dependency modules
 
 ` $ gulp ` // compile and watch
