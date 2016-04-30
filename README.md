@@ -1,5 +1,3 @@
-### This is a new Project
-
 "_"
 
 ### CDN
