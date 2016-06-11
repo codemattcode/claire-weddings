@@ -6,7 +6,6 @@
 * JQuery
 
 ### Local
-* fitText (js)
 * responsive grid (grid.css)
 * animate (css)
 

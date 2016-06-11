@@ -26,6 +26,7 @@ gulp.task('sass', function() {
 //javascript compression / transpile
 gulp.task('js', function() {
   gulp.src('js/app.js')
+  .pipe(babel())
   .pipe(plumber())
   .pipe(rename({suffix:'.min'}))
   .pipe(uglify())
