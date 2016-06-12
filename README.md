@@ -8,6 +8,10 @@
 ### Local
 * responsive grid (grid.css)
 * animate (css)
+* p5
+* dom
+* play
+* sound
 
 ### Dependencies 
 
