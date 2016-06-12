@@ -28,9 +28,13 @@
 
 ### Start
 
-` $ cd ` to project dir // navigate to working directory
+` create new repo on github.com + copy repo URL`
 
-` $ git clone ` + repo url + newDirName // copy boilerplate repo into new project dir
+` $ cd to working dir.`
+
+` $ git clone ` + repo url + newDirName // copies boilerplate folder into new project dir
+
+` $ cd ` to new dir 
 
 ` $ npm install ` // pull in dependency modules
 
