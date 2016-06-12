@@ -28,9 +28,13 @@
 
 ### Start
 
+` copy boilerplate repo URL `
+
 ` create new repo on github.com `
 
 ` choose import code (using boilerplate repo URL) ` 
+
+` clone/copy new repo URL `
 
 ` $ cd to working dir.`
 
