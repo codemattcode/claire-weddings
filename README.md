@@ -28,13 +28,15 @@
 
 ### Start
 
-` create new repo on github.com + copy repo URL`
+` create new repo on github.com `
+
+` choose import code (using boilerplate repo URL) ` 
 
 ` $ cd to working dir.`
 
-` $ git clone ` + repo url + newDirName // copies boilerplate folder into new project dir
+` $ git clone ` + new repo URL + new dir name
 
-` $ cd ` to new dir 
+` $ cd to new dir `
 
 ` $ npm install ` // pull in dependency modules
 
