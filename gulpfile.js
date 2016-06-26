@@ -61,7 +61,7 @@ gulp.task('build', ['build:copy', 'build:delete']);
 //browserSync
 gulp.task('browser-sync', function() {
   browserSync({
-    browser: "google chrome canary",
+    browser: "google chrome",
     server:{
       baseDir: './',
     },
