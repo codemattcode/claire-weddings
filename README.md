@@ -1,4 +1,4 @@
-"_"
+Source control code, directory structures and base styles for Claire A Weddings website
 
 ### CDN
 * Normalize 
@@ -8,10 +8,6 @@
 ### Local
 * responsive grid (grid.css)
 * animate (css)
-* p5
-* dom
-* play
-* sound
 
 ### Dependencies 
 
@@ -26,26 +22,19 @@
 * Del
 * Rename
 
-### Start
+### Colour Palette
 
-` copy boilerplate repo URL `
+$ambler-light-green: #1f9343
+$ambler-dark-green: #505e59
+$ambler-light-pink: #fae9e7
+$ambler-dark-pink: #e8bfad
+$ambler-gold: #8a7854
+$ambler-silver: #d1d1d1
+$ambler-grey: #6b6868
 
-` create new repo on github.com `
+### Font/Typography
 
-` choose import code (using boilerplate repo URL) ` 
-
-` clone/copy new repo URL `
-
-` $ cd to working dir.`
-
-` $ git clone ` + new repo URL + new dir name
-
-` $ cd to new dir `
-
-` $ npm install ` // pull in dependency modules
-
-### Gulp
-
-` $ gulp ` // compile and watch
-
-` $ gulp build ` // final production build
+Google Font: Droid
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic)
+Google Font: Merriweather
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic)
