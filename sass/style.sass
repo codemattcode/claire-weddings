@@ -1,11 +1,18 @@
 @import style-baselines
 
-/*  base font/line-height = 24px/36px */
+/*  _basic-reset : font/line-height = 24px/36px */
+
 /* 'droid' 400(i) 700(i) || 'meri' 300(i) 400(i) 700(i) 900(i) */
 
 // LET THERE BE JUSTICE
-html
+body
   background-color: $ambler-grey
+  color: $white-green
+  font-size: $base-font-size
+h1
+  +droid(2, 300, 1, $white-green) 
 p
   +meri(1, 300, 1, $white-green)
+  
+  
 

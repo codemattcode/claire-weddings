@@ -3,19 +3,11 @@
 // IMG 100%
 // BORDER-BOX
 // LET THERE BE JUSTICE
-$base-font-size: 24px
-$base-line-height: 36px
+$base-font-size: 20px
 html
     -ms-text-size-adjust: 100%
     -webkit-text-size-adjust: 100%
-body
-    margin: 0
-    font-family: sans-serif
-    font-size: $base-font-size
-    line-height: $base-line-height
-    -moz-osx-font-smoothing: grayscale
-    -webkit-font-smoothing: antialiased
-    text-rendering: optimizeLegibility
+body,
 h1,
 h2,
 h3,
@@ -29,16 +21,18 @@ ol,
 ul
     margin: 0
     padding: 0
+    font-family: sans-serif
+    font-size: $base-font-size
+    line-height: 1.5 * $base-font-size
+    -moz-osx-font-smoothing: grayscale
+    -webkit-font-smoothing: antialiased
+    text-rendering: optimizeLegibility
+h1
+    font-size: 2em
+    line-height: 2
 main,
 li
-    display: block
-h1,
-h2,
-h3,
-h4,
-h5,
-h6
-    font-size: inherit
+    display: block    
 strong
     font-weight: bold
 a,
@@ -61,7 +55,7 @@ button
 ::focus
     outline: 0
 ::selection
-    background: yellow
+    background: #1f9343
 img
     max-width: 100%
     height: auto
