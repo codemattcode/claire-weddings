@@ -72,8 +72,17 @@
   outline-offset: $offset +rem
 =shadow
   box-shadow: 5rem 5rem 0rem 1rem rgba(0,0,0,0.5)
-
 //special
 =highlight
   background: $highlight
   color: $notBlack
+// clearfix
+=clearfix
+  .cf:before,
+  .cf:after 
+    content: " " /* 1 */
+    display: table /* 2 */
+  .cf:after 
+    clear: both
+  .cf 
+    *zoom: 1

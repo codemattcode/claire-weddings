@@ -8,7 +8,7 @@ font-size: em(12)  > converts pixels to ems add ( ,24) for basefont size
 
 color: tint(red, 10%)
 
-+clearfix
+
 
 /* bourbon neat > 12 column grid example
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -209,3 +209,13 @@ header
       size: contain
       color: yellow
     height: 200px
+
+/* 3 column layout without floats or flex
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+padding: 1em
+  -moz-column-count: 3
+  -moz-column-gap: 1em
+  -webkit-column-count: 3
+  -webkit-column-gap: 1em
+  column-count: 3
+  column-gap: 1em

@@ -1,6 +1,6 @@
 @import style-baselines
 
-/*  _basic-reset : font/line-height = 24px/36px */
+/*  _basic-reset : font/line-height = 20px/30px */
 
 /* 'droid' 400(i) 700(i) || 'meri' 300(i) 400(i) 700(i) 900(i) */
 
@@ -18,6 +18,7 @@ body
 .wrapper
   width: 970px
   margin: 0 auto
+  max-width: 90%
 // NAVIGATION
 #logo-sm
   margin-top: -.45em
@@ -54,12 +55,16 @@ header
   #logo
     z-index: 1
     position: absolute
+    // width: 50%
     top: 45%
     left: 50%
     transform: translate(-50%, -55%)
-      
-.welcome, .about, .testimonials, .gallery, .contact, footer
-  clear: both
+
+.clearfix
+  +clearfix
+
+.welcome, .about, .testimonials, .gallery, .contact, footer, .signoff
+  +clearfix
   
 .welcome, .about, .testimonials, .gallery, .contact, footer
   padding-bottom: 80px
@@ -67,32 +72,74 @@ header
 .push
   height: 65px
 
+// FLEX ROWS
+.flex
+  display: flex
+  align-items: center
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-around
+  align-items: baseline
+  p
+    flex: 1
+    padding: .5em
+
 // WELCOME
 .welcome
   background-color: $ambler-grey
-
+  margin-top: -1px // remove hero img white bottom border
 // ABOUT
 .about
   background-color: $ambler-dark-pink
   h1,p
     color: $hedsor-chocolate
+  #cta-txt
+    text-align: center
   img#claire
     border-radius: 50%
     padding-right: 15px
-  
 // TESTIMONIALS
 .testimonials
   background-color: $ambler-gold
 
 // GALLERY
 .gallery
-  background-color: $ambler-light-green
+  background-color: $ambler-silver
 
 // CONTACT
 .contact
-  background-color: $ambler-silver
-
-// FOOTER
-footer
   background-color: $hedsor-chocolate
-  color: $hedsor-gold-txt
+  padding-bottom: 0px
+  h1,p
+    color: $white-green
+  .contact-form
+    padding: 1em 0
+    padding-bottom: 3em
+    +flex-center
+    input, textarea
+      width: 14em
+      color: $hedsor-chocolate
+    textarea
+      height: 10em
+
+// FOOTER - SOCIAL LINKS
+footer
+  background-color: $ambler-light-green
+  padding-bottom: 0px
+  ul
+    +flex-center
+    height: 3em
+    +meri(1, 300, 1, $white-green)
+    li
+      padding-right: 1em
+      &:last-child
+        padding-right: 0
+      
+
+// CODEMATTCODE
+.signoff
+  padding-top: 4em
+  h6
+    +droid(.7, 300, 1, $white-green) 
+    text-align: center
+    +pad(.5)
