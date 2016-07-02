@@ -6,13 +6,93 @@
 
 // LET THERE BE JUSTICE
 body
-  background-color: $ambler-grey
+  background-color: $ambler-dark-green
   color: $white-green
   font-size: $base-font-size
-h1
-  +droid(2, 300, 1, $white-green) 
-p
-  +meri(1, 300, 1, $white-green)
+  h1
+    +droid(2, 300, 1, $white-green) 
+  p
+    +meri(1, 300, 1, $white-green)
+  h1,p
+    margin-bottom: 20px
+.wrapper
+  width: 970px
+  margin: 0 auto
+// NAVIGATION
+#logo-sm
+  margin-top: -.45em
+  padding: -.5em
+  margin-right: 1em
+nav
+  background-color: $ambler-dark-green
+  height: 65px
+  margin-top: -1px
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 10
+  ul
+    li
+      float: left
+      padding-top: .85em
+      padding-right: 1.5em
+      +meri(1, 300, 1, $white-green)
+a:hover
+  border-bottom: 1px solid $ambler-light-pink
+// LOGO SMALL HOME LINK
+a#home:hover
+  border-bottom: 0px
+// HERO
+header
+  background-image: url(../img/cover.jpg)
+  height: 100vh
+  background-size: cover
+  background-position: bottom
+  background-attachment: fixed
+  +laptop
+    background-attachment: inherit
+  #logo
+    z-index: 1
+    position: absolute
+    top: 45%
+    left: 50%
+    transform: translate(-50%, -55%)
+      
+.welcome, .about, .testimonials, .gallery, .contact, footer
+  clear: both
   
-  
+.welcome, .about, .testimonials, .gallery, .contact, footer
+  padding-bottom: 80px
 
+.push
+  height: 65px
+
+// WELCOME
+.welcome
+  background-color: $ambler-grey
+
+// ABOUT
+.about
+  background-color: $ambler-dark-pink
+  h1,p
+    color: $hedsor-chocolate
+  img#claire
+    border-radius: 50%
+    padding-right: 15px
+  
+// TESTIMONIALS
+.testimonials
+  background-color: $ambler-gold
+
+// GALLERY
+.gallery
+  background-color: $ambler-light-green
+
+// CONTACT
+.contact
+  background-color: $ambler-silver
+
+// FOOTER
+footer
+  background-color: $hedsor-chocolate
+  color: $hedsor-gold-txt
