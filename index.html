@@ -21,7 +21,8 @@
 <!-- ********************************* -->
 <!-- ****** PROJECT STYLESHEET ******* -->
 <!-- ********************************* -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modest-grid.css">
+    <link rel="stylesheet" href="css/style2.css">
 <!--[if lt IE 9]>
   <script src="js/polyfill/html5-shiv.js"></script>
 <![endif]-->
@@ -39,16 +40,19 @@
 <!-- ****** NAVIGATION         ******* -->
 <!-- ********************************* -->
 <nav>
-  <div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 center">
     <ul>
       <li><a id="home" href="#top"><img id="logo-sm" alt="Claire Ambler Logo" src="../img/logo-sm.png"></a></li>
-
-      <li><a href="#welcome">Welcome</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li class="hide"><a href="#welcome">Welcome</a></li>
+      <li class="hide"><a href="#about">About</a></li>
+      <li class="hide"><a href="#testimonials">Testimonials</a></li>
+      <li class="hide"><a href="#gallery">Gallery</a></li>
+      <li class="hide"><a href="#contact">Contact</a></li>
     </ul>
+      </div>
+    </div>
   </div>
 </nav>
 
@@ -56,7 +60,13 @@
 <!-- ****** HERO               ******* -->
 <!-- ********************************* -->
 <header>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 center">
   <img id="logo" alt="Claire Ambler Logo" src="../img/logo-full-lg.png">
+      </div>
+    </div>
+  </div>
 </header>
 
 
@@ -64,19 +74,21 @@
 <!-- ****** WELCOME            ******* -->
 <!-- ********************************* -->
 <div class="welcome">
-  <div class="wrapper">
-    <a name="welcome"></a>
-    <h1 class="push">Welcome</h1>
-    <div class="flex">
+  <div class="container">
+    <div class="row">
+    <div class="col-12"><a name="welcome"></a><h1>Welcome</h1></div>
+
+    <div class="col-6">
     <p>I provide a professional, friendly and discrete service to clients and pride myself in my attention to detail and my own high standards help to ensure that no stone lays unturned to ensure your wedding or occasion day runs as smoothly as possible. I am also there to relieve any stresses for you in the planning process so you can enjoy your day</p>
 
     <p>I have a whole host of like-minded experts in their own field with whom I work alongside providing you with all the elements you need to bring your wedding day together.</p>
-    </div>
-
-    <div class="flex">
+      </div>
+  
+      <div class="col-6">
     <p>I will be with you every step of the way from our initial consultaion to ascertain what level of involvement you wish me to have to liasing with other suppliers on your behalf ensuring that you are involved as much as or as litte as you wish. After all this is your wedding day and I am with you to act in an advisory role and not to take over.</p>
 
     <p>I would love to hear from you if you feel that I can be of assistance. The first step is to contact me so we can arrange a free of charge no obligation consultation at your home or wherever you would like to meet. In wedding planning, synergy between the wedding coordinator and the bride and her fiance is key to a successful relationship after all, its months of planning together.</p>
+      </div>
     </div>
   </div>
 </div>
@@ -87,9 +99,10 @@
 <!-- ****** ABOUT              ******* -->
 <!-- ********************************* -->
 <div class="about">
-  <div class="wrapper">
-    <a name="about"></a>
-    <h1 class="push">About Me</h1>
+    <div class="container">
+    <div class="row">
+    <div class="col-12">
+    <a name="about"></a><h1>About Me</h1>
     
     <img alt="Claire Ambler profile picture" id="claire" src="img/claire-profile.jpg" align="left">
     <p>
@@ -108,7 +121,13 @@
     Perhaps at first glance hiring me to plan your wedding with you may seem a little extravagant but in the long term it will save you time, money and of course stress!
     </p>
 
-    <div class="flex">
+    </div>
+    </div>
+    </div>
+
+    <div class="container">
+    <div class="row">
+    <div class="col-4">
     <p>
     I am an enthusiastic and energetic individual who loves weddings and organisation, and specialise in weddings and events offering a personal service and great attention to detail with a smile.</p> 
     <p>
@@ -116,7 +135,7 @@
     </p>
     </div>
 
-    <div class="flex">
+    <div class="col-4">
     <p>
     You will also be dealing with up to an average of around 15 suppliers to coordinate.  I have the pleasure of working with some great suppliers across the UK specifically in the Home Counties where I am based. I work with these local, reliable and cost effective suppliers to source the right supplier that suits you .
     </p>
@@ -126,7 +145,7 @@
     </p>
     </div>
 
-    <div class="flex">
+    <div class="col-4">
     <p>
     I offer a free of charge no obligation Consultation to met with you to decide if you think we can work together, after all, hiring a wedding coordinator is all about the relationship and trust. 
     </p>
@@ -135,11 +154,17 @@
     I always pride myself in offering you 100% commitment and support from the outset to build your dream wedding day. I am here to relieve you of the stress and anxiety of all the planning, allowing you to concentrate on the fun elements of your  wedding day. I will work with you to understand what you would like your day to be like getting to know you and your partner is a key part of my role to enable me to deliver the day you have dreamed of. 
     </p>
     </div>
+    </div>
+    </div>
 
-    <p id="cta-txt">
-    <a href="#contact">Contact me</a> using the form or links below and let's have a chat. 
+    <div class="container">
+    <div class="row">
+    <div class="col-12">
+    <p id="cta-txt"><a href="#contact">Contact me</a> using the form or links below and let's have a chat. 
     </p>
-  </div>
+    </div>
+    </div>
+    </div>
 </div>
 
 
@@ -148,10 +173,17 @@
 <!-- ****** TESTIMONIALS       ******* -->
 <!-- ********************************* -->
 <div class="testimonials">
-  <div class="wrapper">
-    <a name="testimonials"></a>
-    <h1 class="push">Testimonials</h1>
-  <div class="flex">
+  <div class="container">
+  <div class="row">
+  <div class="col-12">
+    <a name="testimonials"></a><h1>Testimonials</h1>
+  </div>
+  </div>
+  </div>
+
+  <div class="container">
+  <div class="row">
+  <div class="col-6">
   <p>
     Claire was wonderful and understood exactly what we wanted to achieve and everything was beyond our expectations. The day was seamless and if there were any issues we were not aware of them.
   </p>
@@ -159,9 +191,7 @@
   <p>
     Claire is a great wedding planner and made sure everything went without a hiccup!
   </p>
-  </div>
   
-  <div class="flex">
   <p>
     We could not have asked for anything more your friendliness and professionalism was fantastic. We loved every minute of our day, thank you. 
   </p>
@@ -169,9 +199,7 @@
   <p>
     You offered us fantastic support and were brilliant on the day, we are so glad we choose you. 
   </p>
-  </div>
 
-  <div class="flex">
   <p>
     Thank you for being so approachable and helpful and to replying to my numerous emails straight away! The whole day ran so smoothly and we thank you for all your hard work behind the scenes, which meant the day, was perfect from start to finish. 
   </p>
@@ -181,7 +209,7 @@
   </p>
   </div>
 
-  <div class="flex">
+  <div class="col-6">
   <p>
     Thank you Claire, you did an amazing job and we had a beautiful day. 
   </p>  
@@ -189,9 +217,7 @@
   <p>
     We just wanted to say a massive thank you for coordinating our day, you made it stress-free for us. You made sure everything was thought of and kept an eye on everything ensuring they were running smoothly whilst we simply relaxed and enjoyed ourselves. We never imagined we could be so relaxed on our wedding day.
   </p>
-  </div>
 
-  <div class="flex">
   <p>
     You and your team were outstanding. We can honestly say that there is nothing that we would have wanted to change. Your help was immense before and after the wedding. Thank you for the lovely photos too!
   </p>
@@ -199,17 +225,17 @@
   <p>
     Thank your for helping us to organise such a wonderful and memorable day. Your commitment and enthusiasm are so clear to see and your ideas you shared were greatly appreciated. We would certainly recommend you to any of our friends. 
   </p>
-  </div>
 
-  <div class="flex">
   <p>
     Our wedding day far surpassed all of our expectations and thank you for being so accommodating of everything we wanted to achieve. Your enthusiasm for our ideas and amazing organization skills meant we could relax in safe hands and we were so thrilled to see our vision come to life making a totally magical day.
   </p>
 
   <p>
     Wow – what an amazing day, what can we say, your support and guidance has been un-measurable, you really made our day! Having you there on the day felt so special and you really felt like one of our guests. Your kindness and support throughout the last six months was fantastic and nothing was too much trouble. 
-  </p>    
+  </p>
   </div>
+  </div>
+  </div>    
 </div>
 
 
@@ -218,11 +244,14 @@
 <!-- ****** GALLERY            ******* -->
 <!-- ********************************* -->
 <div class="gallery">
-  <div class="wrapper">
-    <a name="gallery"></a>
-    <h1 class="push">Gallery</h1>
-    
+<div class="container">
+  <div class="row">
+  <div class="col-6">
+    <a name="gallery"></a><h1>Gallery</h1>
+
   </div>
+  </div>
+  </div>  
 </div>
 
 
@@ -231,11 +260,10 @@
 <!-- ****** CONTACT            ******* -->
 <!-- ********************************* -->
 <div class="contact">
-  <div class="wrapper">
+  <div class="container">
+  <div class="row">
+  <div class="col-12 center">
     <a name="contact"></a>
-  
- 
-<div class="contact-section">
 
 <div class="contact-sheet">
 
@@ -269,10 +297,13 @@
 
 </div>
 
-</div>    
+</div>
+</div>
+</div>
+   
     
 
-  </div><!-- /wrapper -->
+  
 </div><!-- /contact -->
 
 
@@ -280,13 +311,17 @@
 <!-- ****** SOCIAL LINKS       ******* -->
 <!-- ********************************* -->
 <footer>
-  <div class="wrapper">
+  <div class="container">
+  <div class="row">
+  <div class="col-12">
     <ul>
       <li><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
       <li><a href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a></li>
       <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
       <li><a href="mailto:claire@claireamblerevents.com"><i class="fa fa-envelope"></i></a></li>
     </ul>
+  </div>
+  </div>
   </div>
 </footer>
 
@@ -295,8 +330,12 @@
 <!-- ****** CODEMATTCODE       ******* -->
 <!-- ********************************* -->
 <div class="signoff">
-  <div class="wrapper">
+  <div class="container">
+  <div class="row">
+  <div class="col-12">
     <h6>Designed and Built by <a href="#">@codemattcode</a></h6>
+  </div>
+  </div>
   </div>
 </div>
 <!-- ********************************* -->

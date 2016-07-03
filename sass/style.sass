@@ -14,35 +14,11 @@ body
   p
     +meri(1, 300, 1, $white-green)
 
-// WRAPPER
-.wrapper
-  width: 970px
-  margin: 0 auto
-  max-width: 90%
-
-// CLEARFIX
-.clearfix
-  +clearfix
-
-// SECTIONS CLEARFIX
-.welcome, .about, .testimonials, .gallery, .contact, footer, .signoff
-  +clearfix
-  
-// FLEX ROWS
-.flex
-  display: flex
-  align-items: center
-  flex-direction: row
-  flex-wrap: wrap
-  justify-content: space-around
-  align-items: baseline
-  p
-    flex: 1
-    padding: .5em
 
 // ADD TOP PADDING TO CLEAR NAV BAR ON JUMP TO
-.push
-  padding-top: 65px
+
+// .push
+//   padding-top: 65px
 
 
 /* ******************************************************* */
@@ -52,30 +28,34 @@ body
 /* ******************************************************* */
 /* ***************** // NAVIGATION      ****************** */
 /* ******************************************************* */
-#logo-sm
-  margin-top: -.45em
-  padding: -.5em
-  margin-right: 1em
-// LOGO SMALL HOME LINK
-a#home:hover
-  border-bottom: 0px
-
-// MAIN NAV
 nav
   background-color: $ambler-dark-green
-  height: 65px
-  margin-top: -1px
+  height: 67px
+  padding-top: 10px
   position: fixed
   top: 0
   width: 100%
   z-index: 10
+  #logo-sm
+    margin-top: -.45em
+    padding: -.5em
+    margin-right: 1em
+    a#home:hover
+      border-bottom: 0px
   ul
     li
       float: left
-      padding-top: .85em
       padding-right: 1.5em
+      &:last-of-type
+        padding-right: 0
       +meri(1, 300, 1, $white-green)
-
++nine40
+  .hide  
+    display: none
+  #logo-sm
+    position: absolute
+    left: -15px
+    top: 7px
 // GENERIC HOVER STATE FOR LINKS
 a:hover
   border-bottom: 1px solid $ambler-light-pink
@@ -92,12 +72,14 @@ header
   +laptop
     background-attachment: inherit
   #logo
-    z-index: 1
-    position: absolute
-    // width: 50%
-    top: 45%
-    left: 50%
-    transform: translate(-50%, -55%)
+    padding-top: 3em
+
+    // z-index: 1
+    // position: absolute
+    // // width: 50%
+    // top: 45%
+    // left: 50%
+    // transform: translate(-50%, -55%)
 
 /* ******************************************************* */
 /* ***************** // WELCOME         ****************** */
@@ -115,6 +97,7 @@ header
     color: $hedsor-chocolate
   #cta-txt
     text-align: center
+    font-style: italic
   img#claire
     border-radius: 50%
     padding-right: 15px
@@ -136,48 +119,45 @@ header
 /* ******************************************************* */
 .contact
   background-image: url(../img/assets/6.jpg)
-  height: 100vh
+  // height: 100vh
   background-size: contain
   background-position: bottom
   background-attachment: fixed
-  +laptop
-    background-attachment: inherit
   background-color: $hedsor-chocolate
-  
-  
-  .contact-section
-    +center-middle
-    .contact-sheet
-      width: 65%
-      padding: 2em 3em
-      background-color: $ambler-silver
-      form
-        margin-top: 3em
-      input, select, textarea
-        display: block
-        background-color: transparent
-        border: 1px solid $ambler-grey
-        border-radius: 1px
-        outline: none
-        margin: 1em 0
-        height: 2em
-        width: 100%
-        color: $white-green
-        text-align: center
-      textarea
-        height: 10em
-      ::-webkit-input-placeholder 
-        color: $white-green
-        transition: opacity 250ms ease-in-out  
-      input[type="submit"]
-        background: $ambler-gold
-        border: 1px solid $ambler-gold
-        text-transform: uppercase
-      // :focus::-webkit-input-placeholder 
+
+  .contact-sheet
+    // width: 65%
+    // +nine40
+    //   width: 100%
+    margin: auto
+    padding: 2em 3em
+    background-color: $ambler-silver
+    form
+      margin-top: 3em
+    input, select, textarea
+      display: block
+      background-color: transparent
+      border: 1px solid $ambler-grey
+      border-radius: 1px
+      outline: none
+      margin: 1em 0
+      height: 2em
+      width: 100%
+      color: $white-green
+      text-align: center
+    textarea
+      height: 10em
+    ::-webkit-input-placeholder 
+      color: $white-green
+      transition: opacity 250ms ease-in-out  
+    input[type="submit"]
+      background: $ambler-gold
+      border: 1px solid $ambler-gold
+      text-transform: uppercase
+    // :focus::-webkit-input-placeholder 
       //   color: $ambler-green
 
       // :-ms-input-placeholder 
-      // ::-moz-placeholder 
       // :-moz-placeholder
   
       // :focus:-ms-input-placeholder 
