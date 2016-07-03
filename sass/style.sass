@@ -40,6 +40,11 @@ body
     flex: 1
     padding: .5em
 
+// ADD TOP PADDING TO CLEAR NAV BAR ON JUMP TO
+.push
+  padding-top: 65px
+
+
 /* ******************************************************* */
 /* ***************** END GENERIC STYLES ****************** */
 /* ******************************************************* */
@@ -130,31 +135,54 @@ header
 /* ***************** // CONTACT         ****************** */
 /* ******************************************************* */
 .contact
-  background-image: url(../img/assets/8.jpg)
+  background-image: url(../img/assets/6.jpg)
   height: 100vh
-  background-size: cover
+  background-size: contain
   background-position: bottom
   background-attachment: fixed
   +laptop
     background-attachment: inherit
   background-color: $hedsor-chocolate
-  padding-bottom: 0px
-  .form-display
-    background: $ambler-silver
-    width: 65%
-    margin: 0 auto
-    padding: 1em 2em
-    h1,p
-      color: $white-green
-    .contact-form
-      padding: 1em 0
-      padding-bottom: 3em
-      input, textarea
-        width: 95%
+  
+  
+  .contact-section
+    +center-middle
+    .contact-sheet
+      width: 65%
+      padding: 2em 3em
+      background-color: $ambler-silver
+      form
+        margin-top: 3em
+      input, select, textarea
+        display: block
+        background-color: transparent
+        border: 1px solid $ambler-grey
+        border-radius: 1px
+        outline: none
+        margin: 1em 0
         height: 2em
-        color: $hedsor-chocolate
+        width: 100%
+        color: $white-green
+        text-align: center
       textarea
         height: 10em
+      ::-webkit-input-placeholder 
+        color: $white-green
+        transition: opacity 250ms ease-in-out  
+      input[type="submit"]
+        background: $ambler-gold
+        border: 1px solid $ambler-gold
+        text-transform: uppercase
+      // :focus::-webkit-input-placeholder 
+      //   color: $ambler-green
+
+      // :-ms-input-placeholder 
+      // ::-moz-placeholder 
+      // :-moz-placeholder
+  
+      // :focus:-ms-input-placeholder 
+      // :focus:-moz-placeholder 
+      // :focus::-moz-placeholder
 
 /* ******************************************************* */
 /* ***************** // SOCIAL LINKS    ****************** */
@@ -176,7 +204,7 @@ footer
 /* ***************** // CODEMATTCODE    ****************** */
 /* ******************************************************* */
 .signoff
-  padding-top: 4em
+  // padding-top: 4em
   h6
     +droid(.7, 300, 1, $white-green) 
     text-align: center
