@@ -38,3 +38,4 @@ Source control code, directory structures and base styles for Claire A Weddings 
 * @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic)
 * Google Font: Merriweather
 * @import url(http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic)
+* @import url(https://fonts.googleapis.com/css?family=Alex+Brush)

@@ -2,28 +2,60 @@
 
 /*  _basic-reset : font/line-height = 20px/30px */
 
-/* 'droid' 400(i) 700(i) || 'meri' 300(i) 400(i) 700(i) 900(i) */
+/* 'droid' 400(i) 700(i) || 'meri' 300(i) 400(i) 700(i) 900(i) || 'alex' */
 
-// LET THERE BE JUSTICE
+// GENERIC BODY STYLING
 body
   background-color: $ambler-dark-green
   color: $white-green
   font-size: $base-font-size
   h1
-    +droid(2, 300, 1, $white-green) 
+    +alex(3, 300, 1, $white-green) 
   p
     +meri(1, 300, 1, $white-green)
-  h1,p
-    margin-bottom: 20px
+
+// WRAPPER
 .wrapper
   width: 970px
   margin: 0 auto
   max-width: 90%
-// NAVIGATION
+
+// CLEARFIX
+.clearfix
+  +clearfix
+
+// SECTIONS CLEARFIX
+.welcome, .about, .testimonials, .gallery, .contact, footer, .signoff
+  +clearfix
+  
+// FLEX ROWS
+.flex
+  display: flex
+  align-items: center
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-around
+  align-items: baseline
+  p
+    flex: 1
+    padding: .5em
+
+/* ******************************************************* */
+/* ***************** END GENERIC STYLES ****************** */
+/* ******************************************************* */
+
+/* ******************************************************* */
+/* ***************** // NAVIGATION      ****************** */
+/* ******************************************************* */
 #logo-sm
   margin-top: -.45em
   padding: -.5em
   margin-right: 1em
+// LOGO SMALL HOME LINK
+a#home:hover
+  border-bottom: 0px
+
+// MAIN NAV
 nav
   background-color: $ambler-dark-green
   height: 65px
@@ -38,12 +70,14 @@ nav
       padding-top: .85em
       padding-right: 1.5em
       +meri(1, 300, 1, $white-green)
+
+// GENERIC HOVER STATE FOR LINKS
 a:hover
   border-bottom: 1px solid $ambler-light-pink
-// LOGO SMALL HOME LINK
-a#home:hover
-  border-bottom: 0px
-// HERO
+
+/* ******************************************************* */
+/* ***************** // HERO            ****************** */
+/* ******************************************************* */
 header
   background-image: url(../img/cover.jpg)
   height: 100vh
@@ -60,35 +94,16 @@ header
     left: 50%
     transform: translate(-50%, -55%)
 
-.clearfix
-  +clearfix
-
-.welcome, .about, .testimonials, .gallery, .contact, footer, .signoff
-  +clearfix
-  
-.welcome, .about, .testimonials, .gallery, .contact, footer
-  padding-bottom: 80px
-
-.push
-  height: 65px
-
-// FLEX ROWS
-.flex
-  display: flex
-  align-items: center
-  flex-direction: row
-  flex-wrap: wrap
-  justify-content: space-around
-  align-items: baseline
-  p
-    flex: 1
-    padding: .5em
-
-// WELCOME
+/* ******************************************************* */
+/* ***************** // WELCOME         ****************** */
+/* ******************************************************* */
 .welcome
   background-color: $ambler-grey
   margin-top: -1px // remove hero img white bottom border
-// ABOUT
+
+/* ******************************************************* */
+/* ***************** // ABOUT           ****************** */
+/* ******************************************************* */
 .about
   background-color: $ambler-dark-pink
   h1,p
@@ -98,31 +113,52 @@ header
   img#claire
     border-radius: 50%
     padding-right: 15px
-// TESTIMONIALS
+
+/* ******************************************************* */
+/* ***************** // TESTIMONIALS    ****************** */
+/* ******************************************************* */
 .testimonials
   background-color: $ambler-gold
 
-// GALLERY
+/* ******************************************************* */
+/* ***************** // GALLERY         ****************** */
+/* ******************************************************* */
 .gallery
-  background-color: $ambler-silver
+  background-color: $ambler-dark-pink
 
-// CONTACT
+/* ******************************************************* */
+/* ***************** // CONTACT         ****************** */
+/* ******************************************************* */
 .contact
+  background-image: url(../img/assets/8.jpg)
+  height: 100vh
+  background-size: cover
+  background-position: bottom
+  background-attachment: fixed
+  +laptop
+    background-attachment: inherit
   background-color: $hedsor-chocolate
   padding-bottom: 0px
-  h1,p
-    color: $white-green
-  .contact-form
-    padding: 1em 0
-    padding-bottom: 3em
-    +flex-center
-    input, textarea
-      width: 14em
-      color: $hedsor-chocolate
-    textarea
-      height: 10em
+  .form-display
+    background: $ambler-silver
+    width: 65%
+    margin: 0 auto
+    padding: 1em 2em
+    h1,p
+      color: $white-green
+    .contact-form
+      padding: 1em 0
+      padding-bottom: 3em
+      input, textarea
+        width: 95%
+        height: 2em
+        color: $hedsor-chocolate
+      textarea
+        height: 10em
 
-// FOOTER - SOCIAL LINKS
+/* ******************************************************* */
+/* ***************** // SOCIAL LINKS    ****************** */
+/* ******************************************************* */
 footer
   background-color: $ambler-light-green
   padding-bottom: 0px
@@ -136,7 +172,9 @@ footer
         padding-right: 0
       
 
-// CODEMATTCODE
+/* ******************************************************* */
+/* ***************** // CODEMATTCODE    ****************** */
+/* ******************************************************* */
 .signoff
   padding-top: 4em
   h6

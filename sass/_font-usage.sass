@@ -8,6 +8,7 @@ $droid: "Droid Serif", serif
 // 400+i 700+i :::: PARAGRAPHS 22PX/400/1.6
 $meri: "Merriweather", serif
 // 300 400 700 800 +i :::: PARAGRAPHS & $BOLD @30px-40px
+$alex: "Alex Brush", cursive
 
 =droid($fontSize, $weight, $heightValue, $color)
   font-family: $droid
@@ -23,4 +24,10 @@ $meri: "Merriweather", serif
   line-height: (1.5 * $heightValue)
   color: $color
 
+=alex($fontSize, $weight, $heightValue, $color )
+  font-family: $alex
+  font-size: (1 * $fontSize) + em
+  font-weight: $weight
+  line-height: (1.5 * $heightValue)
+  color: $color
 
