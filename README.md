@@ -32,6 +32,9 @@ Source control code, directory structures and base styles for Claire A Weddings 
 * $ambler-silver: #d1d1d1
 * $ambler-grey: #6b6868
 
+* $hedsor-chocolate: #362f21
+* $white-green: #f2f8e6 
+
 ### Font/Typography
 
 * Google Font: Droid
