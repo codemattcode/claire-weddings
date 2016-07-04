@@ -19,7 +19,7 @@
   margin-left: $margin-left + rem
 =margin($margin)
   margin: $margin +rem
-// alignment
+// alignment mixins
 =centercenter
   text-align: center
   position: absolute
@@ -40,6 +40,17 @@
   float: right
 =nofloat
   float: none
+/* ==== POSITIONING as CLASSES ==== */
+.left 
+  text-align: left
+.right 
+  text-align: right
+.center 
+  text-align: center
+  margin-left: auto
+  margin-right: auto
+.justify 
+  text-align: justify
 // images and divs
 =cover-fixed
   height: 100vh

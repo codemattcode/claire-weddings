@@ -10,7 +10,7 @@ body
   color: $white-green
   font-size: $base-font-size
   h1
-    +alex(3, 300, 1, $white-green) 
+    +alex(3, 300, 1, $white-green)
   p
     +meri(1, 300, 1, $white-green)
 
@@ -49,7 +49,11 @@ nav
       &:last-of-type
         padding-right: 0
       +meri(1, 300, 1, $white-green)
-+nine40
+  #menu
+    display: none
+    +ten40
+      display: block
++ten40
   .hide  
     display: none
   #logo-sm
@@ -69,8 +73,8 @@ header
   background-size: cover
   background-position: bottom
   background-attachment: fixed
-  +laptop
-    background-attachment: inherit
+  +ten40
+    background-image: none 
   #logo
     padding-top: 3em
 
@@ -87,35 +91,108 @@ header
 .welcome
   background-color: $ambler-grey
   margin-top: -1px // remove hero img white bottom border
-
+  padding: 1em
+  h1
+    padding-top: 15px
+    padding-bottom: 5px
+    line-height: .5 
 /* ******************************************************* */
 /* ***************** // ABOUT           ****************** */
 /* ******************************************************* */
 .about
   background-color: $ambler-dark-pink
+  padding: 1em
   h1,p
     color: $hedsor-chocolate
+  h1
+    padding-top: 15px
+    padding-bottom: 5px
+    line-height: .5 
   #cta-txt
     text-align: center
     font-style: italic
   img#claire
     border-radius: 50%
     padding-right: 15px
-
-/* ******************************************************* */
+  .card
+    background-color: $white
+    +ten40
+      // width: 400px
+      max-width: 100%
+    p
+      padding: 1em
+    .card-bg
+      height: 150px
+      position: relative
+      .icon
+        position: absolute
+        left: calc(85% / 2)
+        top: 115px
+        border-radius: 50% 
+    .c-bg-1
+      background: url("../img/cards/4.jpg") no-repeat scroll center
+      background-position: 0 -110px
+      +ten40
+        background-position: center
+    .c-bg-2
+      background: url("../img/cards/2.jpg") no-repeat scroll center
+      background-position: -130px -210px
+      +ten40
+        background-position: center
+    .c-bg-3
+      background: url("../img/cards/3.jpg") no-repeat scroll center
+      background-position: -90px -200px
+      +ten40
+        background-position: center
+    .c-bg-4
+      background: url("../img/cards/1.png") no-repeat scroll center
+      +ten40
+        background-position: center
+    .c-bg-5
+      background: url("../img/cards/5.jpg") no-repeat scroll center
+      background-position: -180px -130px
+      +ten40
+        background-position: center
+    .c-bg-6
+      background: url("../img/cards/6.jpg") no-repeat scroll center
+      background-position: -100px -300px
+      +ten40
+        background-position: 0 -300px
+        background-position: center
+    .c-bg-7
+      background: url("../img/cards/7.jpg") no-repeat scroll center
+      background-position: -40px -210px
+      +ten40
+        background-position: center
+    .c-bg-8
+      background: url("../img/cards/8.jpg") no-repeat scroll center
+      background-position: -160px -50px
+      +ten40
+        background-position: center
+/*  ******************************************************* */
 /* ***************** // TESTIMONIALS    ****************** */
 /* ******************************************************* */
 .testimonials
   background-color: $ambler-gold
-
+  padding: 1em
+  h1
+    padding-top: 15px
+    padding-bottom: 5px
+    line-height: .5 
+  p
+    padding: 1.5em
+  p::before, p::after
+    content: '"'
 /* ******************************************************* */
 /* ***************** // GALLERY         ****************** */
 /* ******************************************************* */
 .gallery
   background-color: $ambler-dark-pink
+  padding: 1em
   a:hover
     border: 0px 
-    
+  img
+    padding: 1em
   .thumb
     height: 150px
 /* ******************************************************* */
@@ -128,7 +205,7 @@ header
   background-position: bottom
   background-attachment: fixed
   background-color: $hedsor-chocolate
-
+  padding: 1em
   .contact-sheet
     // width: 65%
     // +nine40
@@ -179,6 +256,9 @@ footer
     height: 3em
     +meri(1, 300, 1, $white-green)
     li
+      a
+        &:hover
+          border: 0
       padding-right: 1em
       &:last-child
         padding-right: 0

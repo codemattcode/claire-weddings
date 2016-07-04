@@ -64,6 +64,7 @@ gulp.task('browser-sync', function() {
     browser: "google chrome",
     server:{
       baseDir: './',
+      online: true,
     },
   });
 });
@@ -71,7 +72,6 @@ gulp.task('browser-sync', function() {
 // watch
 gulp.task('watch', function() {
   gulp.watch('sass/*.sass', ['sass']);
-  gulp.watch('css/*.css', ['sass']);
   gulp.watch('js/*.js', ['js']);
   gulp.watch('*.html', ['html']);
 });
