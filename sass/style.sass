@@ -40,7 +40,7 @@ nav
     margin-top: -.45em
     padding: -.5em
     margin-right: 1em
-  a#home:hover
+  a#home:hover, a#cta-link:hover
     border: 0px
   ul
     li
@@ -49,6 +49,13 @@ nav
       &:last-of-type
         padding-right: 0
       +meri(1, 300, 1, $white-green)
+    .cta
+      background-color: $ambler-gold
+      border-radius: 6px
+      &:hover
+        background-color: $ambler-grey
+      #cta-link
+        padding-left: 25px
   #menu
     display: none
     +ten40
@@ -68,7 +75,7 @@ a:hover
 /* ***************** // HERO            ****************** */
 /* ******************************************************* */
 header
-  background-image: url(../img/cover.jpg)
+  background-image: url(../img/bgs/cover.jpg)
   height: 100vh
   background-size: cover
   background-position: bottom
@@ -111,6 +118,15 @@ header
   #cta-txt
     text-align: center
     font-style: italic
+    padding: 25px 0 10px
+    a#cta-2
+      background-color: $ambler-gold
+      padding: 10px
+      color: white
+      border-radius: 6px
+      &:hover
+        background-color: $ambler-grey
+        border: 0px
   img#claire
     border-radius: 50%
     padding-right: 15px
@@ -130,42 +146,42 @@ header
         top: 115px
         border-radius: 50% 
     .c-bg-1
-      background: url("../img/cards/4.jpg") no-repeat scroll center
+      background: url("../img/about/cards/4.jpg") no-repeat scroll center
       background-position: 0 -110px
       +ten40
         background-position: center
     .c-bg-2
-      background: url("../img/cards/2.jpg") no-repeat scroll center
+      background: url("../img/about/cards/2.jpg") no-repeat scroll center
       background-position: -130px -210px
       +ten40
         background-position: center
     .c-bg-3
-      background: url("../img/cards/3.jpg") no-repeat scroll center
+      background: url("../img/about/cards/3.jpg") no-repeat scroll center
       background-position: -90px -200px
       +ten40
         background-position: center
     .c-bg-4
-      background: url("../img/cards/1.png") no-repeat scroll center
+      background: url("../img/about/cards/1.png") no-repeat scroll center
       +ten40
         background-position: center
     .c-bg-5
-      background: url("../img/cards/5.jpg") no-repeat scroll center
+      background: url("../img/about/cards/5.jpg") no-repeat scroll center
       background-position: -180px -130px
       +ten40
         background-position: center
     .c-bg-6
-      background: url("../img/cards/6.jpg") no-repeat scroll center
+      background: url("../img/about/cards/6.jpg") no-repeat scroll center
       background-position: -100px -300px
       +ten40
         background-position: 0 -300px
         background-position: center
     .c-bg-7
-      background: url("../img/cards/7.jpg") no-repeat scroll center
+      background: url("../img/about/cards/7.jpg") no-repeat scroll center
       background-position: -40px -210px
       +ten40
         background-position: center
     .c-bg-8
-      background: url("../img/cards/8.jpg") no-repeat scroll center
+      background: url("../img/about/cards/8.jpg") no-repeat scroll center
       background-position: -160px -50px
       +ten40
         background-position: center
@@ -176,13 +192,14 @@ header
   background-color: $ambler-gold
   padding: 1em
   h1
-    padding-top: 15px
-    padding-bottom: 5px
+    padding: 15px 0
     line-height: .5 
   p
     padding: 1.5em
   p::before, p::after
     content: '"'
+  img#testimonials-img
+    border-radius: 50%
 /* ******************************************************* */
 /* ***************** // GALLERY         ****************** */
 /* ******************************************************* */
@@ -199,7 +216,7 @@ header
 /* ***************** // CONTACT         ****************** */
 /* ******************************************************* */
 .contact
-  background-image: url(../img/assets/6.jpg)
+  background-image: url(../img/bgs/6.jpg)
   // height: 100vh
   background-size: contain
   background-position: bottom
@@ -212,13 +229,13 @@ header
     //   width: 100%
     margin: auto
     padding: 2em 3em
-    background-color: $ambler-silver
+    background-color: $ambler-grey
     form
       margin-top: 3em
     input, select, textarea
       display: block
       background-color: transparent
-      border: 1px solid $ambler-grey
+      border: 1px solid $ambler-gold  
       border-radius: 1px
       outline: none
       margin: 1em 0
@@ -249,12 +266,12 @@ header
 /* ***************** // SOCIAL LINKS    ****************** */
 /* ******************************************************* */
 footer
-  background-color: $ambler-light-green
+  background-color: $ambler-dark-pink
   padding-bottom: 0px
   ul
     +flex-center
-    height: 3em
-    +meri(1, 300, 1, $white-green)
+    height: 2em
+    +meri(2, 300, 1, $white-green)
     li
       a
         &:hover

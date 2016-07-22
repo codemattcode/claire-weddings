@@ -24,7 +24,6 @@ Source control code, directory structures and base styles for Claire A Weddings 
 
 ### Colour Palette
 
-* $ambler-light-green: #1f9343
 * $ambler-dark-green: #505e59
 * $ambler-light-pink: #fae9e7
 * $ambler-dark-pink: #e8bfad
