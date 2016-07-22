@@ -6,8 +6,9 @@ Source control code, directory structures and base styles for Claire A Weddings 
 * JQuery
 
 ### Local
-* responsive grid (grid.css)
+* responsive grid (modest-grid.css)
 * animate (css)
+* lightbox (css/min.js)
 
 ### Dependencies 
 
