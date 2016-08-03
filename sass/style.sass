@@ -149,42 +149,48 @@ header
       background: url("../img/about/cards/4.jpg") no-repeat scroll center
       background-position: 0 -110px
       +ten40
-        background-position: center
+        background-position: 50% 40%
+        background-size: cover
     .c-bg-2
       background: url("../img/about/cards/2.jpg") no-repeat scroll center
       background-position: -130px -210px
       +ten40
-        background-position: center
+        background-position: 50% 65%
+        background-size: cover
     .c-bg-3
       background: url("../img/about/cards/3.jpg") no-repeat scroll center
       background-position: -90px -200px
       +ten40
-        background-position: center
+        background-position: 50% 40%
+        background-size: cover
     .c-bg-4
       background: url("../img/about/cards/1.png") no-repeat scroll center
       +ten40
         background-position: center
+        background-size: cover
     .c-bg-5
       background: url("../img/about/cards/5.jpg") no-repeat scroll center
       background-position: -180px -130px
       +ten40
-        background-position: center
+        background-position: 50% 60%
     .c-bg-6
       background: url("../img/about/cards/6.jpg") no-repeat scroll center
       background-position: -100px -300px
       +ten40
-        background-position: 0 -300px
-        background-position: center
+        background-position: 60% 65%
+        background-size: cover
     .c-bg-7
       background: url("../img/about/cards/7.jpg") no-repeat scroll center
       background-position: -40px -210px
       +ten40
         background-position: center
+        background-size: cover
     .c-bg-8
       background: url("../img/about/cards/8.jpg") no-repeat scroll center
       background-position: -160px -50px
       +ten40
-        background-position: center
+        background-position: 60% 30%
+        background-size: cover
 /*  ******************************************************* */
 /* ***************** // TESTIMONIALS    ****************** */
 /* ******************************************************* */
@@ -198,8 +204,14 @@ header
     padding: 1.5em
   p::before, p::after
     content: '"'
+  .five80
+    @media only screen and (min-width: 580px) and (max-width: 800px)
+      +flex-center
   img#testimonials-img
     border-radius: 50%
+    @media only screen and (min-width: 580px) and (max-width: 800px)
+      align-self: center
+      max-width: 60%
 /* ******************************************************* */
 /* ***************** // GALLERY         ****************** */
 /* ******************************************************* */

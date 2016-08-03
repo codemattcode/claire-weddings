@@ -99,10 +99,10 @@
 }
 
 /* ******************************************** */
-/* switch from mobile first to 1040px and above */
+/* switch from mobile first to columns @800px and above */
 /* ******************************************** */
 
-@media only screen and (min-width: 1040px) { 
+@media only screen and (min-width: 800px) { 
   .col-1 {
     width: 4.33%;
   }
