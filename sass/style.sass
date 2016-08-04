@@ -11,8 +11,14 @@ body
   font-size: $base-font-size
   h1
     +alex(3, 300, 1, $white-green)
+    +ten40
+      +alex(2, 300, 1, $white-green)
+      text-align: center
+      margin-left: -10px
   p
     +meri(1, 300, 1, $white-green)
+    +ten40
+      +meri(.9, 300, 1, $white-green)
 
 
 // ADD TOP PADDING TO CLEAR NAV BAR ON JUMP TO
@@ -60,6 +66,17 @@ nav
     display: none
     +ten40
       display: block
+  .scroll-down, .show-email-cta
+    font-size: .8em
+    position: absolute
+    top: 10px
+    width: 100%
+    margin: 0 auto
+    left: 10px
+    right: 0
+    text-align: center
+  .show-email-cta
+    left: -10px
 +ten40
   .hide  
     display: none
@@ -67,6 +84,7 @@ nav
     position: absolute
     left: -15px
     top: 7px
+    
 // GENERIC HOVER STATE FOR LINKS
 a:hover
   border-bottom: 1px solid $ambler-light-pink
@@ -239,13 +257,14 @@ header
   background-color: $hedsor-chocolate
   padding: 1em
   .contact-sheet
-    // width: 65%
-    // +nine40
-    //   width: 100%
+    width: 65%
+    +ten40
+      width: 100%
     margin: auto
     padding: 3em 3em
     padding-bottom: 5em
     background-color: $ambler-grey
+    border-radius: 6px
   #cta-3
     color: $ambler-dark-pink
     text-transform: uppercase

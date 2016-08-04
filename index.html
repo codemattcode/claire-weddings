@@ -6,10 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Claire Ambler Weddings</title>
-    <meta name="description" content="I am an enthusiastic and energetic individual who loves weddings and organisation, and specialise in weddings and events offering a personal service and great attention to detail with a smile. 
-">
-    <link rel="shortcut icon" href="img/favicon.ico">
-
+    <meta name="description" content="I am an enthusiastic and energetic individual who loves weddings and organisation, and specialise in weddings and events offering a personal service and great attention to detail with a smile.">
+<!-- ********************************* -->
+<!-- ******** VENDOR FAVICONS ******** -->
+<!-- ********************************* -->
+    <link rel="shortcut icon" href="img/favi/favicon.ico" type="image/x-icon">
+<link rel="icon" href="img/favi/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favi/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favi/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favi/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favi/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favi/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favi/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favi/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favi/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favi/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favi/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favi/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favi/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favi/favicon-16x16.png">
+    <link rel="manifest" href="img/favi/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favi/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 <!-- ********************************* -->
 <!-- ****** VENDOR STYLESHEETS ******* -->
 <!-- ********************************* -->
@@ -52,8 +71,14 @@
       <li class="hide"><a href="#about">About</a></li>
       <li class="hide"><a href="#testimonials">Testimonials</a></li>
       <li class="hide"><a href="#gallery">Gallery</a></li>
-      <li class="hide cta"><a id="cta-link" href="mailto:claire@claireamblerevents.com">Email me</a></li>
-      <li id="menu"><a href="#">Menu</a></li>
+      <li class="hide cta"><a id="cta-link" href="mailto:claire@claireamblerevents.com">Email Me</a></li>
+<!-- ********************************* -->
+<!-- ***** RESPONSIVE NAVIGATION ***** -->
+<!-- ********************************* --> 
+      <li id="menu" class="scroll-down">Scroll Down</li>
+      
+      <!-- <li id="menu" class="show-email-cta"><a href="mailto:claire@claireamblerevents.com">Email me</a></li> -->
+    
     </ul>
       </div>
     </div>
@@ -463,6 +488,27 @@
 <!-- ********************************* -->
     <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
     <script src="js/libs/lightbox.min.js"></script>
+
+    <script type="text/javascript">
+      $(window).scroll(function() {
+        var viewportWidth = $(window).width();
+
+        if (viewportWidth < 1040) { 
+          
+          if ($(this).scrollTop()>0)
+           {
+              $('.scroll-down').fadeOut();
+              // $('.show-email-cta').fadeIn();
+           }
+          else
+           {
+            $('.scroll-down').fadeIn();
+            // $('.show-email-cta').fadeOut();
+           }
+        }
+    });
+    </script>
+
   </body>
 </html>
 <!-- ********************************* -->
