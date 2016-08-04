@@ -119,6 +119,7 @@ header
     text-align: center
     font-style: italic
     padding: 25px 0 10px
+    margin-bottom: 10px
     a#cta-2
       background-color: $ambler-gold
       padding: 10px
@@ -127,6 +128,8 @@ header
       &:hover
         background-color: $ambler-grey
         border: 0px
+  #cta-tel
+    text-align: center
   img#claire
     border-radius: 50%
     padding-right: 15px
@@ -240,8 +243,12 @@ header
     // +nine40
     //   width: 100%
     margin: auto
-    padding: 2em 3em
+    padding: 3em 3em
+    padding-bottom: 5em
     background-color: $ambler-grey
+  #cta-3
+    color: $ambler-dark-pink
+    text-transform: uppercase
     form
       margin-top: 3em
     input, select, textarea
@@ -260,7 +267,8 @@ header
     ::-webkit-input-placeholder 
       color: $white-green
       transition: opacity 250ms ease-in-out  
-    input[type="submit"]
+    button[type="submit"]
+      width: 100%
       background: $ambler-gold
       border: 1px solid $ambler-gold
       text-transform: uppercase

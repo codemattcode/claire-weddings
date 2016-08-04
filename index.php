@@ -1,3 +1,26 @@
+<!-- ********************************* -->
+<!-- ****** CONTACT FORM SERVER SIDE SCRIPTING ******* -->
+<!-- ********************************* -->
+
+<?php
+  if(empty($_POST) === false ) {
+    $errors = array();
+
+    $name    = $_POST['name'];
+    $email   = $_POST['email'];
+    $message = $_POST['message'];
+
+      if (empty($errors) === true) {
+        mail('test@srrc.com', 'Client-Name-Domain : Contact Form Message', $message, 'From: ' . $email);
+        header('Location: index.php?sent');
+      }
+
+    }
+?>
+
+<!-- ********************************* -->
+<!-- ****** /CONTACT FORM ******* -->
+<!-- ********************************* -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -52,13 +75,14 @@
       <li class="hide"><a href="#about">About</a></li>
       <li class="hide"><a href="#testimonials">Testimonials</a></li>
       <li class="hide"><a href="#gallery">Gallery</a></li>
-      <li class="hide cta"><a id="cta-link" href="mailto:claire@claireamblerevents.com">Email me</a></li>
+      <li class="hide cta"><a id="cta-link" href="#contact">Contact</a></li>
       <li id="menu"><a href="#">Menu</a></li>
     </ul>
       </div>
     </div>
   </div>
 </nav>
+
 <!-- ********************************* -->
 <!-- ****** HERO               ******* -->
 <!-- ********************************* -->
@@ -207,8 +231,8 @@
     <div class="container">
     <div class="row">
     <div class="col-12">
-    <p id="cta-txt"><a id="cta-2" href="mailto:claire@claireamblerevents.com">Email me</a></p> 
-    <p id="cta-tel">or call me on 07766706782</p>
+    <p id="cta-txt"><a id="cta-2" href="#contact">Contact me</a> using the form or links below and let's have a chat. 
+    </p>
     </div>
     </div>
     </div>
@@ -378,35 +402,36 @@
     <a name="contact"></a>
 
 <div class="contact-sheet">
-
-  <h1>Contact</h1>
-  <p>If you would like a free consulation, a chat about your wedding or have any questions, please <a id="cta-3" href="mailto:claire@claireamblerevents.com">email me</a> or message me on any of the social links below. Alternatively call me on 07766706782</p>
-    
-  <!--   <form action="">
+  <div class="form-hide">
+    <h1>Contact</h1>
+    <p>If you would like a free consulation, a chat about your wedding or have any questions, please use the form or any of the social links below. Alternatively call me on 07766706782</p>
+  </div>  
+    <form id="contactForm" action="index.php" Method="POST">
+  <div class="form-hide">
       <p> 
-      <input type="text" name="name" placeholder="Your Name">
+      <input type="text" name="name" placeholder="Your Name" required>
       </p>
       
       <p>
       <input type="text" name="date" placeholder="Wedding Date"></p>
 
       <p>
-      <input type="text" name="email" placeholder="Your Email Address">
+      <input type="email" name="email" placeholder="Your Email Address"  required>
       </p>
       
       <p>
-      <input type="text" name="telephone" placeholder="Telephone Number">
+      <input type="number" name="telephone" placeholder="Telephone Number">
       </p>
 
       <p>
-      <textarea id="requirements" name="requirements" placeholder="Your Requirements"></textarea>
+      <textarea id="message" name="message" placeholder="Your Requirements" required></textarea>
       </p>
-
+  </div><!-- /form-hide -->
       <p>
-      <button type="submit">Submit</button>
+      <input type="submit" name="submit" value="submit">
       </p>
-    </form> -->
-
+    </form>
+    
 </div>
 
 </div>
@@ -463,6 +488,43 @@
 <!-- ********************************* -->
     <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
     <script src="js/libs/lightbox.min.js"></script>
+<!-- ********************************* -->
+<!-- ****** CONTACT FORM JS/JQ  ****** -->
+<!-- ********************************* -->
+<script>
+     $("#contactForm").submit(function(event) 
+     {
+         /* stop form from submitting normally */
+         event.preventDefault();
+
+         /* get some values from elements on the page: */
+         var $form = $( this ),
+             $submit = $form.find( 'button[type="submit"]' ),
+             name_value = $form.find( 'input[name="name"]' ).val(),
+             email_value = $form.find( 'input[name="email"]' ).val(),
+             message_value = $form.find( 'textarea[name="message"]' ).val(),
+             url = $form.attr('action');
+
+         /* Send the data using post */
+         var posting = $.post( url, { 
+                           name: name_value, 
+                           email: email_value, 
+                           message: message_value 
+                       });
+
+         posting.done(function( data )
+         {
+             /* hide the form fields on submit */
+             $('.form-hide').text('I aim to reply to all email within 48 hours');
+
+             /* Change the button text. */
+             $submit.text('Sent, Thank you');
+
+             /* Disable the button. */
+             $submit.attr("disabled", true);
+         });
+    });
+</script>
   </body>
 </html>
 <!-- ********************************* -->
